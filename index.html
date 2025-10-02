@@ -1,52 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awab's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awab's Portfolio</title>
+  <style>
+    /* Elegant font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-        h1 {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            margin: 0;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a; /* deep black */
+      color: #f5f5f5;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-        h2 {
-            margin-top: 20px;
-            color: #555;
-        }
+    /* Smooth moving gradient background (subtle, not rainbow) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at top left, #1a1a1a, #000);
+      animation: subtleMove 30s ease-in-out infinite alternate;
+      z-index: -1;
+    }
 
-        p {
-            max-width: 600px;
-            margin: 10px auto;
-            line-height: 1.6;
-        }
+    @keyframes subtleMove {
+      from { transform: translate(0, 0); }
+      to   { transform: translate(-10%, -10%); }
+    }
 
-        img {
-            margin-top: 20px;
-            border-radius: 10px;
-            border: 3px solid #4CAF50;
-            width: 250px;
-            height: auto;
-        }
-    </style>
+    /* Container with glass look */
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1rem;
+      color: #ddd;
+      margin: 20px auto;
+      max-width: 650px;
+    }
+
+    img {
+      margin-top: 30px;
+      border-radius: 12px;
+      width: 320px;
+      max-width: 90%;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      opacity: 0.95;
+    }
+
+    /* Luxury button */
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 14px 40px;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #444, #222);
+      border: 1px solid #666;
+      transition: all 0.4s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #888, #444);
+      border-color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Awab's Porfolio</h1>
-    <h2>Frontend / Backend Developer / Lua / Python developer.</h2>
-    <p>Very experienced. Have past experiences, with proof.</p>
-    <p>Skilled and has a wide variaty of skillsets. Can work full time and part time.</p>
-    <p>enjoy a picture of my cat while you think about hiring me:</p>
-    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="My test image">
+  <div class="container">
+    <h1>Awab's Portfolio</h1>
+    <h2>Frontend • Backend • Lua • Python Developer</h2>
+    <p>Experienced developer with proven projects and a diverse skill set. Available for full-time or part-time opportunities. Focused on quality, performance, and modern design.</p>
+    <p>Enjoy a picture of my cat while you consider hiring me:</p>
+    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Cute Cat">
+    <br>
+    <a href="#" class="btn">Hire Me</a>
+  </div>
 </body>
 </html>
